@@ -40,7 +40,7 @@ def _auto_norm(data_set):
 
 def dating_class_test():
     ho_ratio = 0.10
-    dating_data_mat, dating_labels = _file2matrix('D:\workspace\PycharmProjects\machinelearning\classify\knn\dating\datingTestSet2.txt')
+    dating_data_mat, dating_labels = _file2matrix('E:\PycharmProjects\machinelearning\classify\knn\dating\datingTestSet2.txt')
     norm_mat, ranges, min_vals = _auto_norm(dating_data_mat)
     m = norm_mat.shape[0]
     num_test_vecs = int(m * ho_ratio)
@@ -58,7 +58,7 @@ def classify_person():
     percent_tats = float(input('玩视频游戏所耗时间百分比: '))
     ff_miles = float(input('每年获得的飞行常客里程数: '))
     ice_cream = float(input('每周消费的冰淇淋公升数: '))
-    dating_data_mat, dating_labels = _file2matrix('D:\workspace\PycharmProjects\machinelearning\classify\knn\dating\datingTestSet2.txt')
+    dating_data_mat, dating_labels = _file2matrix('E:\PycharmProjects\machinelearning\classify\knn\dating\datingTestSet2.txt')
     norm_mat, ranges, min_vals = _auto_norm(dating_data_mat)
     in_arr = array([ff_miles, ice_cream, percent_tats])
     classifier_result = knn.classify0((in_arr - min_vals) / ranges, norm_mat, dating_labels, 3)
