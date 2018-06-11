@@ -21,5 +21,15 @@ def create_data_set():
     labels = ['no surfacing', 'flippers']
     return data_set, labels
 
+
+def split_data_set(data_set, axis, value):
+    ret_data_set = []
+    for feat_vec in data_set:
+        if feat_vec[axis] == value:
+            reduce_feat_vec = feat_vec[:axis]
+            reduce_feat_vec.extend(feat_vec[axis + 1:])
+            data_set.append(reduce_feat_vec)
+    return ret_data_set
+
 data_set, labels = create_data_set()
 print(calc_shannon_ent(data_set))
