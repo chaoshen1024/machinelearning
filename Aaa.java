@@ -1,6 +1,0 @@
-/* 
-* hjkl
-*/
-public class Aaa {
-
-}
