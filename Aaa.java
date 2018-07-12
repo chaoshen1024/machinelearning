@@ -1,6 +1,6 @@
 /* 
 * hjkl
 */
-class Aaa {
+public class Aaa {
 
 }
